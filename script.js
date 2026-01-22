@@ -1,9 +1,9 @@
 /* Make every element with class="cat" draggable */
 document.querySelectorAll('.cat').forEach(dragElement);
 
-function dragElement(terrariumElement) {
+function dragElement(cattreeElement) {
   let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  terrariumElement.onpointerdown = pointerDrag;
+  cattreeElement.onpointerdown = pointerDrag;
 
   function pointerDrag(e) {
     e.preventDefault();
@@ -19,8 +19,8 @@ function dragElement(terrariumElement) {
     pos3 = e.clientX;
     pos4 = e.clientY;
 
-    terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + "px";
-    terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + "px";
+    cattreeElement.style.top = (cattreeElement.offsetTop - pos2) + "px";
+    cattreeElement.style.left = (cattreeElement.offsetLeft - pos1) + "px";
   }
 
   function stopElementDrag() {
