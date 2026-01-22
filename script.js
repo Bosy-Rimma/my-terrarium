@@ -1,23 +1,14 @@
-/* Draggable elements inspired by W3Schools */
-
-const cats = document.querySelectorAll('.cat');
-
-cats.forEach(cat => dragElement(cat));
+/* Make every element with class="cat" draggable */
+document.querySelectorAll('.cat').forEach(dragElement);
 
 function dragElement(terrariumElement) {
-  let pos1 = 0,
-      pos2 = 0,
-      pos3 = 0,
-      pos4 = 0;
-
+  let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   terrariumElement.onpointerdown = pointerDrag;
 
   function pointerDrag(e) {
     e.preventDefault();
-
     pos3 = e.clientX;
     pos4 = e.clientY;
-
     document.onpointermove = elementDrag;
     document.onpointerup = stopElementDrag;
   }
@@ -28,10 +19,8 @@ function dragElement(terrariumElement) {
     pos3 = e.clientX;
     pos4 = e.clientY;
 
-    terrariumElement.style.top =
-      terrariumElement.offsetTop - pos2 + 'px';
-    terrariumElement.style.left =
-      terrariumElement.offsetLeft - pos1 + 'px';
+    terrariumElement.style.top = (terrariumElement.offsetTop - pos2) + "px";
+    terrariumElement.style.left = (terrariumElement.offsetLeft - pos1) + "px";
   }
 
   function stopElementDrag() {
@@ -39,4 +28,3 @@ function dragElement(terrariumElement) {
     document.onpointermove = null;
   }
 }
-
