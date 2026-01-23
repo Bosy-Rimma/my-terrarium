@@ -11,4 +11,3 @@ Find more information on pointer events on the [W3C docs](https://www.w3.org/TR/
 Always check browser capabilities using [CanIUse.com](https://caniuse.com/).
 
 Learn more about building sites for the web and mobile devices at [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=msbuild-github-jelooper).
-.
