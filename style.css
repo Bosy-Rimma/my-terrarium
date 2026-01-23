@@ -14,13 +14,12 @@ h1 {
   min-height: 100vh;
 }
 
-/* CAT TREE / MAIN STAGE */
 #cat-tree {
   position: relative;
   width: 70%;
   height: 90vh;
   margin: 0 auto;
-  background-image: url("./cat-tree.png"); /* MUST match file location */
+  background-image: url("./images/cat-tree.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -61,4 +60,5 @@ h1 {
 }
 
 .cat:active {
-  cursor: grabb
+  cursor: grabbing;
+}
